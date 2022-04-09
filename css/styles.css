@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.label{
+    color: rgb(255 163 67);
+}
+.nowrap{
+    white-space: nowrap;
+}
+#smsinfo{
+    font-size: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.imageextwarn{
+    display: block !important;
+}
