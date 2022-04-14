@@ -20,11 +20,16 @@ $B = $_POST['B'];
 $rotationtext = $_POST['rotationtext'];
 $rotationimage = $_POST['rotationimage'];
 $fonteditor = $_POST['fonteditor'];
+$fontstyle = $_POST['font'];
+
 
 $txt=imagelib("{$_POST['texteditor']}");
 $txt=implode(" ",$txt);
 $image_bg= $_FILES['imageeditor']['tmp_name'];
+list($width, $height, $type, $attr) = getimagesize($image_bg);
 
+$width = ($width*$left)/100;
+$height = ($height*$top)/100;
 
 if($ext == 'png')
 {
@@ -40,9 +45,9 @@ if($ext == 'png')
 $im=imagerotate($im, $rotationimage, 0);
 
 
-$font="font/mangal.ttf";
+$font="font/$fontstyle";
 $color=imagecolorallocate($im,$R,$G,$B);
-imagefttext($im,$fonteditor,$rotationtext,$left,$top,$color,$font,$txt);
+imagefttext($im,$fonteditor,$rotationtext,$width,$height,$color,$font,$txt);
 
 if($ext == 'png')
 {

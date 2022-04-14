@@ -1,3 +1,28 @@
+@font-face {
+    font-family: beau;
+    src: url('../font/beau.ttf');
+}
+@font-face {
+    font-family: dancing;
+    src: url('../font/dancing.ttf');
+}
+@font-face {
+    font-family: grape;
+    src: url('../font/grape.ttf');
+}
+@font-face {
+    font-family: indie;
+    src: url('../font/indie.ttf');
+}
+@font-face {
+    font-family: mangal;
+    src: url('../font/mangal.ttf');
+}
+@font-face {
+    font-family: segoeui;
+    src: url('../font/segoeui.ttf');
+}
+
 *{
     margin: 0;
     padding: 0;
